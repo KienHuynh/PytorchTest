@@ -8,6 +8,7 @@ To run cifar10.py:
 * Download the data file .gz [here](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
 * Extract it in ../data/ so that the directory ../data/cifar-10-batches-py exists (or you can simply modify the path in cifar10.py)
 * Run the code
+
 Note: if you can't get CUDA supports to work, remove the lines:
 ```python
 net.cuda()
