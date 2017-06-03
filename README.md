@@ -5,7 +5,7 @@ Requirements:
 
 ## Test with cifar 10
 To run cifar10.py:
-* Download the data file .gz [here](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
+* Download the numpy data file [cifar-10-python.tar.gz](https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz)
 * Extract it in ../data/ so that the directory ../data/cifar-10-batches-py exists (or you can simply modify the path in cifar10.py)
 * Run the code
 
