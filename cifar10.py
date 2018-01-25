@@ -28,7 +28,7 @@ def create_one_hot(target_vector, num_class, dtype=np.float32):
 
 
 # Prepare the data
-def data_prepare(data_path='../data/cifar-10-batches-py/'):
+def data_prepare(data_path='/opt/datasets/CIFAR10/cifar-10-batches-py/'):
     train_X = np.zeros((50000, 32*32*3), dtype=np.float32)
     train_Y = np.zeros((50000, ), dtype=np.int8)
     test_X = np.zeros((10000, 32*32*3), dtype=np.float32)
