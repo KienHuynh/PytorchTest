@@ -6,7 +6,7 @@ from torch.autograd import Variable
 
 import numpy as np
 
-import cPickle
+import pickle
 
 import pdb
 import matplotlib.pyplot as plt
@@ -36,13 +36,13 @@ def data_prepare(data_path='../data/cifar-10-batches-py/'):
     for i in range(1,6):
         file_name = data_path + ('data_batch_%d' % i)
         with open(file_name, 'rb') as f:
-            batch = cPickle.load(f)
+            batch = pickle.load(f, encoding='latin1')
             train_X[(i-1)*10000:i*10000, :] = batch['data']
             train_Y[(i-1)*10000:i*10000] = batch['labels']
 
     file_name = data_path + ('test_batch')
     with open(file_name, 'rb') as f:
-        batch = cPickle.load(f)
+        batch = pickle.load(f, encoding='latin1')
         test_X = batch['data']
         test_Y[0:10000] = batch['labels']
     
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 
-    batch_size = 128
+    batch_size = 16
     num_train = 50000
     num_test = 10000
     num_ite_per_e = int(np.ceil(float(num_train)/float(batch_size)))
